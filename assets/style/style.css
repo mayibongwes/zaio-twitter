@@ -1,0 +1,84 @@
+#main{
+  display: flex;
+  width:90%;
+  height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#main #nav-section{
+  width: 251px;
+}
+
+#main #posts-section{
+  width: 800px;
+  background-color: red;
+}
+
+#main #sidebar{
+  width: 251px;
+  background-color: maroon;
+}
+
+#main #nav-section ul{
+  list-style: none;
+}
+
+#main #nav-section ul li span{
+  line-height: 20px;
+}
+
+#main #nav-section ul li i{
+  margin-right: 15px;
+}
+
+#main #nav-section ul li .bi-three-dots{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 25px;
+  border:2px solid #333;
+  border-radius: 50%;
+}
+
+#main #nav-section button{
+  display: block;
+  background-color: #1d9bf0;
+  color:white;
+  font-weight: bold;
+  width:160px;
+  height: 50px;
+  border: none;
+  margin-left: 32px;
+  border-radius: 2em;
+}
+
+.profile-section{
+  position:fixed;
+  bottom: 0;
+  align-self: flex-end;
+  display: flex;
+  height: 80px;
+  width: 250px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.profile-section h3{
+  font-size: 1em;
+}
+
+.profile-section p{
+  font-size: 1em;;
+}
+
+.profile-section .profile-pic img{
+  width: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.profile-section .profile-menu{
+  margin-left: 15px;
+}
