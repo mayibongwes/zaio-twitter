@@ -7,17 +7,25 @@
 }
 
 #main #nav-section{
-  width: 251px;
+  width: 300px;
+  border-right: 1px solid rgba(0, 0, 0, .05);
 }
 
 #main #posts-section{
-  width: 800px;
-  background-color: red;
+  width: 600px;
+  border-right: 1px solid rgba(0, 0, 0, .05);
+  width:600px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#main #posts-section::-webkit-scrollbar {
+  display: none;
 }
 
 #main #sidebar{
   width: 251px;
-  background-color: maroon;
 }
 
 #main #nav-section ul{
@@ -85,7 +93,7 @@ cursor: pointer;
 }
 
 .profile-section p{
-  font-size: 1em;;
+  font-size: 1em;
 }
 
 .profile-section .profile-pic img{
@@ -97,4 +105,142 @@ cursor: pointer;
 
 .profile-section .profile-menu{
   margin-left: 15px;
+}
+
+#posts-section .header{
+  display: flex;
+  justify-content: space-between;
+  padding:10px;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,.8);
+  z-index: 999;
+}
+
+#posts-section .header .bi-stars{
+  color: #333;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+#posts-section .quick-tweet{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+#posts-section .quick-tweet .profile-pic img{
+  width:48px;
+  border-radius: 50%;
+  margin:0 15px;
+}
+
+#posts-section .quick-tweet .tweet-form{
+  width: calc(100% - 50px);
+}
+
+#posts-section .quick-tweet .tweet-form .text-field input{
+  border: none;
+  font-size: 1.5rem;
+}
+
+#posts-section .quick-tweet .tweet-form .text-field input:focus{
+  border:none;
+  outline: none;
+}
+
+#posts-section .quick-tweet .tweet-form .tweet-buttons{
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+}
+
+#posts-section .quick-tweet .tweet-form .tweet-buttons .input-buttons{
+  display: flex;
+  color: #1d9bf0;
+}
+
+#posts-section .quick-tweet .tweet-form .tweet-buttons .input-buttons i{
+  margin-right: 15px;
+  padding:5px;
+}
+
+#posts-section .quick-tweet .tweet-form .tweet-buttons .input-buttons i:hover{
+  background-color: rgba(29, 155, 240,.1);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#posts-section .quick-tweet .tweet-form .tweet-buttons .submit-button button{
+  border: none;
+  background-color: #1d9bf0;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 1.5em;
+  font-weight: bold;
+  float: right;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+#posts-section .show-more-tweets{
+  width:100%;
+  height: 48px;
+  text-align: center;
+  color: #1d9bf0;
+  line-height: 48px;
+  border: 1px solid rgba(0, 0, 0, .05);
+}
+
+#posts-section .show-more-tweets:hover{
+  background-color: rgba(0, 0, 0, .03);
+  cursor: pointer;
+}
+
+#posts-section .post-card{
+  display:flex;
+  flex-direction: row;
+  padding:10px;
+  transform: scale(0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+#posts-section .post-card .profile-pic{
+  margin-right: 10px;
+}
+
+#posts-section .post-card .profile-pic img{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+#posts-section .post-card .post-details{
+  width: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+}
+
+#posts-section .post-card .post-details .post-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#posts-section .post-card .post-details>img{
+  border-radius: 1em;
+}
+
+#posts-section .post-card .post-details .post-action{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 30px;
+  line-height: 30px;
+}
+
+#posts-section .post-card .post-details .post-action i:hover{
+  cursor: pointer;
+  color:rgb(40, 197, 150);
 }
